@@ -1,1 +1,4 @@
 # DataBase-Technology
+
+-MYQSL
+-Tableau
