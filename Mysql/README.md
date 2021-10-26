@@ -1,9 +1,9 @@
 # DataBase-Technology
 
-DDL
-DML
-DCL
-TCL
+- DDL
+- DML
+- DCL
+- TCL
 
 Relational Schema:
 Primary Key
