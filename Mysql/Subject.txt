@@ -101,6 +101,11 @@ Delete Statement:
 (Drop,Truncate)
 
 JOINS:
+INNER JOIN
+LEFT JOIN (ALL Matching values , only values from left)
+RIGHT JOIN (ALL Matching values , only values from RIGHT)
+CROSS JOIN (Just Connects all the value for the tables)
+
 Subqueries:
 Self Join:
 Views:
