@@ -1,4 +1,4 @@
-# DataBase-Technology
+# MYSQL course List
 
 - DDL
 - DML
@@ -86,7 +86,7 @@ aggregate function:
 - IFNULL()
 
 Comparison Operator:
-=, >, >=, <, <=,!=
+- (=, >, >=, <, <=,!=)
 
 sql query stuctury order:
 - SELECT columnname
