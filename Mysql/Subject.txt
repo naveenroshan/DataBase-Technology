@@ -114,9 +114,3 @@ Mysql Variables:
 Triggers
 Index
 CASE statements
-
-
-
-
-
-	
