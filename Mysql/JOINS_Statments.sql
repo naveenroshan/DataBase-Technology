@@ -98,3 +98,116 @@ CROSS JOIN
 departments d
 WHERE e.emp_no < 10011
 ORDER BY e.emp_no , d.dept_name;
+
+# Join more than two tables
+
+SELECT e.first_name, e.last_name, e.hire_date, m.from_date, d.dept_name
+FROM employees e 
+JOIN
+dept_manager m ON e.emp_no = m.emp_no
+JOIN
+departments d ON m.dept_no = d.dept_no;
+
+SELECT
+e.first_name,
+e.last_name,
+e.hire_date,
+t.title,
+m.from_date,
+d.dept_name
+FROM
+employees e
+JOIN
+dept_manager m ON e.emp_no = m.emp_no
+JOIN
+departments d ON m.dept_no = d.dept_no
+JOIN
+titles t ON e.emp_no = t.emp_no
+WHERE t.title = 'Manager'
+ORDER BY e.emp_no;
+
+SELECT d.dept_name, AVG(salary)
+FROM departments d
+JOIN
+dept_manager m ON d.dept_no = m.dept_no
+JOIN
+salaries s ON m.emp_no = s.emp_no
+GROUP BY d.dept_name;
+
+SELECT e.gender, COUNT(dm.emp_no)
+FROM employees e 
+JOIN
+dept_manager dm ON e.emp_no = dm.emp_no
+GROUP BY gender;
+
+# Union and union all
+
+SELECT
+e.emp_no,
+e.first_name,
+e.last_name,
+NULL AS dept_no,
+NULL AS from_date
+FROM employees_dup e 
+WHERE e.emp_no = 10001
+UNION ALL SELECT 
+NULL AS emp_no,
+NULL AS first_name,
+NULL AS last_name,
+m.dept_no,
+m.from_date
+From dept_manager m;
+
+SELECT
+e.emp_no,
+e.first_name,
+e.last_name,
+NULL AS dept_no,
+NULL AS from_date
+FROM employees_dup e 
+WHERE e.emp_no = 10001
+UNION SELECT 
+NULL AS emp_no,
+NULL AS first_name,
+NULL AS last_name,
+m.dept_no,
+m.from_date
+From dept_manager m;
+
+SELECT * FROM 
+(SELECT 
+ e.emp_no,
+ e.first_name,
+ 
+
+
+
+
+
+drop table if exists employees_dup;
+CREATE TABLE employees_dup(
+emp_no int(11),
+birth_date date,
+first_name varchar(14),
+last_name varchar(16),
+gender enum('M', 'F'),
+hire_date date
+);
+
+INSERT INTO employees_dup
+SELECT e.* 
+FROM employees e
+LIMIT 20;
+
+INSERT INTO employees_dup VALUES
+(
+'10001',
+'1953-09-02',
+'Georgi',
+'Facello',
+'M',
+'1986-06-26'
+);
+
+select * from employees_dup
+where first_name = 'Georgi';
