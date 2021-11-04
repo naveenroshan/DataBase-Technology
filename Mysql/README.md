@@ -107,6 +107,9 @@ JOINS:
 - LEFT JOIN (ALL Matching values , only values from left)
 - RIGHT JOIN (ALL Matching values , only values from RIGHT)
 - CROSS JOIN (Just Connects all the value for the tables)
+- Join More tables
+- UNION
+- UNION ALL
 
 Subqueries:
 Self Join:
