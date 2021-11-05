@@ -110,12 +110,16 @@ JOINS:
 - Join More tables
 - UNION
 - UNION ALL
+- Self Join
 
 Subqueries:
-Self Join:
-Views:
+- in where clause
+- in select & from 
+
+- Views
 Stored procedures
-Mysql Variables:
 Triggers
 Index
 CASE statements
+
+TABLEAU:
