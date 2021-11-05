@@ -192,3 +192,9 @@ SELECT * FROM
  FROM dept_manager dm) as a
  ORDER BY -a.emp_no DESC;
  
+ # self Join
+ SELECT  DISTINCT e1.*
+ FROM emp_manager e1
+ JOIN
+ emp_manager e2 ON e1.emp_no = e2.manager_no;
+ 
