@@ -119,9 +119,10 @@ Subqueries:
 - Views
 - Stored procedures:
   - With Parameter
-  - With Out Parameter
+  - With out Parameter
   - With single Parameter
-  - With multiple 
+  - With multiple Parameter
+  - Storing output to variable 
 - User-Defined function
 - variables
 Triggers
