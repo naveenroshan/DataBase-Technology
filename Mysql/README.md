@@ -117,7 +117,13 @@ Subqueries:
 - in select & from 
 
 - Views
-Stored procedures
+- Stored procedures:
+  - With Parameter
+  - With Out Parameter
+  - With single Parameter
+  - With multiple 
+- User-Defined function
+- variables
 Triggers
 Index
 CASE statements
