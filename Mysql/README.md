@@ -124,9 +124,13 @@ Subqueries:
   - With multiple Parameter
   - Storing output to variable 
 - User-Defined function
-- variables
-Triggers
-Index
-CASE statements
+- Variables
+  - Local variable
+  - Session variable
+  - Global variable
+  - system variable
+- Triggers
+- Index
+- CASE statements
 
-TABLEAU:
+TABLEAU
