@@ -130,6 +130,8 @@ Subqueries:
   - Global variable
   - system variable
 - Triggers
+  - Before (DML statements)
+  - After (DML Statements)
 - Index
 - CASE statements
 
