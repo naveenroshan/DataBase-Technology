@@ -16,8 +16,6 @@ Relationship:
 - many to one
 - One to One
 
-PWD : Root@123
-
 create a database
 
 data type:
@@ -135,4 +133,4 @@ Subqueries:
 - Index
 - CASE statements
 
-TABLEAU
+- TABLEAU
