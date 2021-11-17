@@ -1,4 +1,4 @@
-# MYSQL course List
+# MYSQL course List Udemy from career 360
 
 - DDL
 - DML
