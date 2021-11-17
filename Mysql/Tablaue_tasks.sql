@@ -1,4 +1,6 @@
-# Query for Task 1:
+# Create a visualization that provides a breakdown between the male 
+# and female employees working in the company each year, starting from 1990
+
 SELECT YEAR(td.from_date) AS Calender_date,
 	   te.gender AS gender,
        count(te.emp_no) AS No_Of_Employees
