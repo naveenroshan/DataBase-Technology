@@ -1,12 +1,17 @@
 package com.example.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import java.time.LocalDateTime;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
 @Document(collection = "student")
 public class Student {
 
@@ -16,50 +21,14 @@ public class Student {
     private String name;
     @Field(name = "email")
     private String email;
+    private String password;
     private Department department;
     private List<Subject> subjects;
+    private LocalDateTime dateOfBirth;
+    private String timeZone;
+    private LocalDateTime dateOfJoining;
     @Transient
     private double percentage;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
-
-    public List<Subject> getSubjects() {
-        return subjects;
-    }
-
-    public void setSubjects(List<Subject> subjects) {
-        this.subjects = subjects;
-    }
 
     public double getPercentage() {
         if(subjects != null && subjects.size() > 0){
@@ -71,9 +40,4 @@ public class Student {
         }
         return 0.00;
     };
-
-    public void setPercentage(double percentage) {
-        this.percentage = percentage;
-    }
-
 }

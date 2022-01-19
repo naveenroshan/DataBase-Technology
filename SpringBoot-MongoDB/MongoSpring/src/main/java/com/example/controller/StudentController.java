@@ -1,6 +1,8 @@
 package com.example.controller;
 
+import com.example.dto.StudentDto;
 import com.example.entity.Student;
+import com.example.forms.StudentForm;
 import com.example.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +17,12 @@ public class StudentController {
     StudentService studentService;
 
     @PostMapping("/create")
-    public Student createStudent (@RequestBody Student student){
+    public Student createStudent (@RequestBody StudentForm student){
         return studentService.createStudent(student);
     }
 
     @GetMapping("/getById/{id}")
-    public Student getStudentById (@PathVariable String id){
+    public StudentDto getStudentById (@PathVariable String id){
         return studentService.getStudentById(id);
     }
 

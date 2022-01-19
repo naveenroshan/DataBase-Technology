@@ -1,27 +1,14 @@
 package com.example.entity;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Field;
-
+@Data
+@NoArgsConstructor
 public class Subject {
 
     @Field(name="subjectName")
     private String subjectName;
     @Field(name="marksObtained")
     private int marksObtained;
-
-    public String getSubjectName() {
-        return subjectName;
-    }
-
-    public void setSubjectName(String subjectName) {
-        this.subjectName = subjectName;
-    }
-
-    public int getMarksObtained() {
-        return marksObtained;
-    }
-
-    public void setMarksObtained(int marksObtained) {
-        this.marksObtained = marksObtained;
-    }
 }

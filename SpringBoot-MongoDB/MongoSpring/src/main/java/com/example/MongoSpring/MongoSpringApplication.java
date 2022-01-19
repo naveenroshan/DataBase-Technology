@@ -10,10 +10,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories("com.example.repository")
 @ComponentScan("com.example.*")
 public class MongoSpringApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(MongoSpringApplication.class, args);
 		System.out.println("Spring Monogo Started");
 	}
-
 }

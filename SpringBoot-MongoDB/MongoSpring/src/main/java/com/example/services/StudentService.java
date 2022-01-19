@@ -1,13 +1,17 @@
 package com.example.services;
 
+import com.example.dto.StudentDto;
 import com.example.entity.Student;
+import com.example.forms.StudentForm;
 import com.example.repository.StudentRepository;
+import com.example.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import org.apache.commons.lang3.RandomUtils;
 import java.util.List;
 
 @Service
@@ -15,13 +19,28 @@ public class StudentService {
     @Autowired
     StudentRepository studentRepository;
 
-    public Student createStudent (Student student){
+    public Student createStudent (StudentForm studentForm){
+        Student student = new Student();
+            student.setName(studentForm.getName());
+            student.setEmail(studentForm.getEmail());
+            student.setPassword(RandomUtils.nextInt() + "ABCD");
+            student.setDepartment(studentForm.getDepartment());
+            student.setSubjects(studentForm.getSubjects());
+            student.setDateOfBirth(DateUtil.convertStringToLocalDateTime(studentForm.getDateOfBirth(),studentForm.getTimeZone()));
+            student.setDateOfJoining(DateUtil.convertStringToLocalDateTime(studentForm.getDateOfJoining(),studentForm.getTimeZone()));
+            student.setTimeZone(studentForm.getTimeZone());
         studentRepository.save(student);
         return student;
     }
 
-    public Student getStudentById (String id){
-    return studentRepository.findById(id).get();
+    public StudentDto getStudentById (String id){
+        Student student = studentRepository.findById(id).get();
+        StudentDto dto = new StudentDto();
+            dto.setName(student.getName());
+            dto.setEmail(student.getEmail());
+            dto.setDateOfJoining(student.getDateOfJoining().toString());
+            dto.setTimeZone(student.getTimeZone());
+        return dto;
     }
 
     public List<Student> getAllStudents (){
