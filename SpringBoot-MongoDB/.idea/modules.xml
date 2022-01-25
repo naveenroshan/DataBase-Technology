@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MongoSpring/MongoSpring.iml" filepath="$PROJECT_DIR$/MongoSpring/MongoSpring.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/SpringBoot-MongoDB.iml" filepath="$PROJECT_DIR$/.idea/SpringBoot-MongoDB.iml" />
     </modules>
   </component>
 </project>

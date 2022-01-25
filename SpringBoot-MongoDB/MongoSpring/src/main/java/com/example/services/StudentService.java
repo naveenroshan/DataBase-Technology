@@ -93,6 +93,4 @@ public class StudentService {
     public List<Student> getbyNameStartWith(String name){
         return studentRepository.findByNameStartsWith(name);
     }
-
-
 }
