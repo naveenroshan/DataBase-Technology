@@ -22,7 +22,7 @@ public class Student {
     @Field(name = "email")
     private String email;
     private String password;
-    private Department department;
+    private String departmentId;
     private List<Subject> subjects;
     private LocalDateTime dateOfBirth;
     private String timeZone;

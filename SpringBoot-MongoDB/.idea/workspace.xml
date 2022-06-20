@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c44a1141-811e-4677-914c-2e933966611e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/DepartmentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/DepartmentForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/DepartmentRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/StudentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/StudentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/StudentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -61,13 +73,13 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/thanks/MyData/DataBase-Technology/SpringBoot-MongoDB"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thanks/MyData/DataBase-Technology/SpringBoot-MongoDB&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.MongoSpringApplication">
     <configuration name="MongoSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.MongoSpring.MongoSpringApplication" />
@@ -169,5 +181,16 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
     <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

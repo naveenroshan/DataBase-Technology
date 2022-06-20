@@ -66,10 +66,10 @@ public class StudentController {
         return studentService.getAllWithSorting();
     }
 
-    @GetMapping("/byDepartmentNameSubDocumentField")
-    public List<Student> getDepartmentNameSubDocumentField(@RequestParam String deptName){
-        return studentService.getDepartmentNameSubField(deptName);
-    }
+//    @GetMapping("/byDepartmentNameSubDocumentField")
+//    public List<Student> getDepartmentNameSubDocumentField(@RequestParam String deptName){
+//        return studentService.getDepartmentNameSubField(deptName);
+//    }
 
     @GetMapping("/bySubjectNameArrayValue")
     public List<Student> getSubjectNameArrayValue(@RequestParam String subName){

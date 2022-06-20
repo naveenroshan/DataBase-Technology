@@ -1,6 +1,5 @@
 package com.example.forms;
 
-import com.example.entity.Department;
 import com.example.entity.Subject;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,7 @@ public class StudentForm {
     private String id;
     private String name;
     private String email;
-    private Department department;
+    private String departmentId;
     private List<Subject> subjects;
     private String dateOfBirth;
     private String timeZone;

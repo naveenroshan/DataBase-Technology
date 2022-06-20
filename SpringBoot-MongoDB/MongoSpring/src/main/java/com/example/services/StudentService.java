@@ -24,7 +24,7 @@ public class StudentService {
             student.setName(studentForm.getName());
             student.setEmail(studentForm.getEmail());
             student.setPassword(RandomUtils.nextInt() + "ABCD");
-            student.setDepartment(studentForm.getDepartment());
+            student.setDepartmentId(studentForm.getDepartmentId());
             student.setSubjects(studentForm.getSubjects());
             student.setDateOfBirth(DateUtil.convertStringToLocalDateTime(studentForm.getDateOfBirth(),studentForm.getTimeZone()));
             student.setDateOfJoining(DateUtil.convertStringToLocalDateTime(studentForm.getDateOfJoining(),studentForm.getTimeZone()));
@@ -78,9 +78,9 @@ public class StudentService {
         return studentRepository.findAll(sort);
     }
 
-    public List<Student> getDepartmentNameSubField(String deptName){
-        return studentRepository.findByDepartmentDepartmentName(deptName);
-    }
+//    public List<Student> getDepartmentNameSubField(String deptName){
+//        return studentRepository.findByDepartmentDepartmentName(deptName);
+//    }
 
     public List<Student> getSubjectNameArrayValue(String subName){
         return studentRepository.findBySubjectsSubjectName(subName);
@@ -93,4 +93,5 @@ public class StudentService {
     public List<Student> getbyNameStartWith(String name){
         return studentRepository.findByNameStartsWith(name);
     }
+
 }

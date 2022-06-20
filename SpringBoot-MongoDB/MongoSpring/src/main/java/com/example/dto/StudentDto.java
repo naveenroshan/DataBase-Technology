@@ -12,6 +12,7 @@ public class StudentDto {
     private String id;
     private String name;
     private String email;
+    private String departmentId;
     private String departmentName;
     private List<Subject> subjects;
     private String dateOfBirth;
