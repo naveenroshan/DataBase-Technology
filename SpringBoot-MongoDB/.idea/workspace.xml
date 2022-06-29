@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c44a1141-811e-4677-914c-2e933966611e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/DepartmentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/DepartmentForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/DepartmentRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/dto/StudentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/StudentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/forms/StudentForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/java/com/example/services/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MongoSpring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MongoSpring/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/3.3.0/spring-data-mongodb-3.3.0.jar!/org/springframework/data/mongodb/repository/MongoRepository.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
