@@ -1,0 +1,38 @@
+MongoDB Queries:
+
+Count Query
+db.getCollection('persons').find({}).count()
+
+Find Query 
+db.getCollection('persons').find({})
+
+Empty Query
+db.getCollection('persons').find({})
+
+Equality Query
+db.getCollection('persons').find({"age" : 20})
+db.getCollection('persons').find({"gender" : "female","eyeColor" : "green"})
+
+Introduction to Operators
+ - we can use the Comparison Operators for sorting number, string, Date
+    Comparison Operators:
+         Abrevation ($eq = equal to , 
+                     $neq = not equal to, 
+                     $lt = less than, 
+                     $gt = greater than, 
+                     $lte = less than or equal to
+                     $in = in
+                     $nin = not in
+                     $and
+                     $or)
+
+          db.getCollection('persons').find({"eyeColor" : {"$ne": "green" }})
+          db.getCollection('persons').find({"age" : {"$gt": 25 }})
+          db.getCollection('persons').find({"age" : {"$gte": 25 }})
+          db.getCollection('persons').find({"age" : {"$gt": 25, "lte" :30 }})
+          db.getCollection('persons').find({"name" : {"$gt": "N" }}).sort({"name" : 1})
+          db.getCollection('persons').find({"age" : {"$in": [21, 22]}})
+          db.getCollection('persons').find({"age" : {"$nin": [21, 22]}})
+          db.getCollection('persons').find({$and: [{gender:"female"}, {favoriteFruit:"banana"}]})
+          db.getCollection('persons').find({$and: [{age:{$ne:25}}, {age:{$gte: 25}}]}).sort({age: -1}) \\ $sort key ordering must be 1 (for ascending) or -1 (for descending)"
+          db.getCollection('persons').find({$or:[{isActive:true},{eyeColor:"blue"}]})
