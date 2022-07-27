@@ -15,6 +15,7 @@ db.getCollection('persons').find({"gender" : "female","eyeColor" : "green"})
 
 Introduction to Operators
  - we can use the Comparison Operators for sorting number, string, Date
+
     Comparison Operators:
          Abrevation ($eq = equal to , 
                      $neq = not equal to, 
@@ -36,3 +37,19 @@ Introduction to Operators
           db.getCollection('persons').find({$and: [{gender:"female"}, {favoriteFruit:"banana"}]})
           db.getCollection('persons').find({$and: [{age:{$ne:25}}, {age:{$gte: 25}}]}).sort({age: -1}) \\ $sort key ordering must be 1 (for ascending) or -1 (for descending)"
           db.getCollection('persons').find({$or:[{isActive:true},{eyeColor:"blue"}]})
+
+    Embedded Documents:
+
+         db.getCollection('persons').find({"company":{
+        "title" : "DIGITALUS",
+        "email" : "kittysnow@digitalus.com",
+        "phone" : "+1 (949) 568-3470",
+        "location" : {
+            "country" : "Italy",
+            "address" : "154 Arlington Avenue"
+         }
+         }})
+         
+         db.getCollection('persons').find({"company.location.country": "Italy"})
+
+
