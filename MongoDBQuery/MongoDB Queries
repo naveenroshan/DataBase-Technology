@@ -25,7 +25,9 @@ Introduction to Operators
                      $in = in
                      $nin = not in
                      $and
-                     $or)
+                     $or
+                     $all
+                     $size)
 
           db.getCollection('persons').find({"eyeColor" : {"$ne": "green" }})
           db.getCollection('persons').find({"age" : {"$gt": 25 }})
@@ -51,5 +53,33 @@ Introduction to Operators
          }})
          
          db.getCollection('persons').find({"company.location.country": "Italy"})
+   
+    Arrays by Specific Value:
 
+        db.getCollection('persons').find({"tags.1": "ad"})
+        db.getCollection('persons').find({tags:{$all:["id","ad"]}})
+        db.getCollection('persons').find({tags:{$size:4}})
+   
+   Array of Nested Documents:
 
+      db.getCollection('first').find({"friends.age" : 23})
+      db.getCollection('first').find({"friends.age" : {$gt:30, $lt:25}})
+
+   $elemMatch operator:
+     
+     db.getCollection('first').find({friends: {$elemMatch:{"name":"Ram", "age":27}}})
+
+   $exists and $type query operators
+
+      db.getCollection('first').find({name:{$exists:true}}) - to check name field is present in the document
+
+      db.getCollection('first').find({"friends.age" :{$type:"int"}})
+
+   Fields Filtering
+
+      db.getCollection('persons').find({}, {name:1, age:1, company:1})
+      db.getCollection('persons').find({}, {name:1, age:1, "company.location":1})
+
+   $regex operator
+
+      db.getCollection('persons').find({name:{$regex: /rel/i}})
