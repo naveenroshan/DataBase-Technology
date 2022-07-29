@@ -83,3 +83,46 @@ Introduction to Operators
    $regex operator
 
       db.getCollection('persons').find({name:{$regex: /rel/i}})
+
+   Mapreduce funcation : 
+
+   
+   Join Two Collections :
+
+   $lookup (Aggregation) function - creates an outer left join with another collection and helps to filter data from merged data.
+
+   whose syntax is defined below:
+
+   {
+   $lookup:
+     {
+       from: <collection to join>,
+       localField: <field from the input documents>,
+       foreignField: <field from the documents of the "from" collection>,
+       as: <output array field>
+     }
+   }
+
+   Sample: 
+   Students.aggregate([{
+                        $lookup: {
+                        From: ‘Grades’,
+                        LocalField: ‘Student_id’,
+                        foreignField: ‘Stud_id’,
+                        as: ‘Student_grade’
+                     }}]);
+
+   db.userInfo.aggregate([
+    { $lookup:
+        {
+           from: "address",
+           localField: "contact_name",
+           foreignField: "name",
+           as: "address"
+        }
+    }
+]).pretty();
+
+$lookup is used with a pipeline to perform MongoDB join two collections :
+
+
