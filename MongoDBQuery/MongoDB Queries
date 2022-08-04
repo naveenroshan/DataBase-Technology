@@ -85,6 +85,18 @@ Introduction to Operators
       db.getCollection('persons').find({name:{$regex: /rel/i}})
 
    Mapreduce funcation : 
+      var mapfunction = function(){emit(this.age,this.favoriteFruit)}
+      var reducefunction = function(key,value){return Array.concat(value)}
+      db.persons.mapReduce(mapfunction,reducefunction,{'out':'Result_mapreduce'})
+
+      db.Result_mapreduce.find()
+
+      //using query in map reduce
+
+      db.persons.mapReduce(function(){emit(this.age,this.favoriteFruit);},
+                            function(key,value){return Array.concat(value)},
+                            {query:{age:{$eq:"banana"}},
+                            out:'Result1_mapreduce'})
 
    
    Join Two Collections :
