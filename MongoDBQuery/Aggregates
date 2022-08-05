@@ -1,0 +1,77 @@
+Aggregation :
+
+Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.
+
+
+This is an example of how to build an aggregation query:
+
+     db.collectionName.aggregate(pipeline, options)
+
+where collectionName – is the name of a collection,
+pipeline – is an array that contains the aggregation stages,
+options – optional parameters for the aggregation 
+
+pipeline syntax:
+
+pipeline = [
+        		{ $match : { … } },
+        		{ $group : { … } },
+        		{ $sort : { … } }
+       	]
+		
+
+MongoDB $match:
+
+db.universities.aggregate([
+    {$match : {country : 'Spain', city : 'Salamanca'}}
+]).pretty()
+
+MongoDB $project:
+
+db.universities.aggregate([
+  { $project : {	
+  				_id : 0,
+				country : 1,
+				city : 1,
+				name : 1
+			} 
+  }
+]).pretty()
+
+MongoDB $group :
+
+db.universities.aggregate([
+  { $group : { 
+  				_id : '$name',
+				totaldocs : { $sum : 1 } 
+		    }
+  }
+]).pretty()
+
+MongoDB $out:
+
+db.universities.aggregate([
+  { $group : { _id : '$name', totaldocs : { $sum : 1 } } },
+  { $out : 'aggResults' }
+])
+
+MongoDB $sort :
+
+db.universities.aggregate([
+  { $match : { name : 'USAL' } },
+  { $unwind : '$students' },
+  { $project : { _id : 1, 'students.year' : 1, 'students.number' : 1 } },
+  { $sort : { 'students.number' : -1 } }
+]).pretty()
+
+MongoDB $limit:
+
+db.universities.aggregate([
+  { $match : { name : 'USAL' } },
+  { $unwind : '$students' },
+  { $project : { _id : 0, 'students.year' : 1, 'students.number' : 1 } },
+  { $sort : { 'students.number' : -1 } },
+  { $limit : 2 }
+]).pretty()
+
+

@@ -1,3 +1,4 @@
+
 MongoDB Queries:
 
 Count Query
@@ -16,7 +17,7 @@ db.getCollection('persons').find({"gender" : "female","eyeColor" : "green"})
 Introduction to Operators
  - we can use the Comparison Operators for sorting number, string, Date
 
-    Comparison Operators:
+Comparison Operators:
          Abrevation ($eq = equal to , 
                      $neq = not equal to, 
                      $lt = less than, 
@@ -39,8 +40,7 @@ Introduction to Operators
           db.getCollection('persons').find({$and: [{gender:"female"}, {favoriteFruit:"banana"}]})
           db.getCollection('persons').find({$and: [{age:{$ne:25}}, {age:{$gte: 25}}]}).sort({age: -1}) \\ $sort key ordering must be 1 (for ascending) or -1 (for descending)"
           db.getCollection('persons').find({$or:[{isActive:true},{eyeColor:"blue"}]})
-
-    Embedded Documents:
+Embedded Documents:
 
          db.getCollection('persons').find({"company":{
         "title" : "DIGITALUS",
@@ -54,37 +54,37 @@ Introduction to Operators
          
          db.getCollection('persons').find({"company.location.country": "Italy"})
    
-    Arrays by Specific Value:
+Arrays by Specific Value:
 
         db.getCollection('persons').find({"tags.1": "ad"})
         db.getCollection('persons').find({tags:{$all:["id","ad"]}})
         db.getCollection('persons').find({tags:{$size:4}})
    
-   Array of Nested Documents:
+Array of Nested Documents:
 
       db.getCollection('first').find({"friends.age" : 23})
       db.getCollection('first').find({"friends.age" : {$gt:30, $lt:25}})
 
-   $elemMatch operator:
+$elemMatch operator:
      
      db.getCollection('first').find({friends: {$elemMatch:{"name":"Ram", "age":27}}})
 
-   $exists and $type query operators
+$exists and $type query operators
 
       db.getCollection('first').find({name:{$exists:true}}) - to check name field is present in the document
 
       db.getCollection('first').find({"friends.age" :{$type:"int"}})
 
-   Fields Filtering
+Fields Filtering
 
       db.getCollection('persons').find({}, {name:1, age:1, company:1})
       db.getCollection('persons').find({}, {name:1, age:1, "company.location":1})
 
-   $regex operator
+$regex operator
 
       db.getCollection('persons').find({name:{$regex: /rel/i}})
 
-   Mapreduce funcation : 
+Mapreduce funcation : 
       var mapfunction = function(){emit(this.age,this.favoriteFruit)}
       var reducefunction = function(key,value){return Array.concat(value)}
       db.persons.mapReduce(mapfunction,reducefunction,{'out':'Result_mapreduce'})
@@ -99,7 +99,7 @@ Introduction to Operators
                             out:'Result1_mapreduce'})
 
    
-   Join Two Collections :
+Join Two Collections :
 
    $lookup (Aggregation) function - creates an outer left join with another collection and helps to filter data from merged data.
 
@@ -135,6 +135,7 @@ Introduction to Operators
     }
 ]).pretty();
 
-$lookup is used with a pipeline to perform MongoDB join two collections :
+$lookup is used with a pipeline to perform MongoDB join two collection.
+
 
 
